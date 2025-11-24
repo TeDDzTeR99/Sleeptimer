@@ -33,7 +33,7 @@ dlg.Show()
 DoSleep(*) {
     ; global Hours, Minutes, Seconds, dlg
     ; Pull control values into variables
-    dlg.Submit()
+    dlg.Submit(false)
     ; Normalize/convert inputs to numeric values (defaults to 0)
     hours := dlg["Hours"].Value + 0
     minutes := dlg["Minutes"].Value + 0
