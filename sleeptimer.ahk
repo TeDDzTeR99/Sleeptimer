@@ -8,22 +8,22 @@
 dlg := Gui()
 ; global Hours, Minutes, Seconds
 ; Labels and inputs
-dlg.Add("Text", "x10 y12", "Hours:")
-dlg.Add("Edit", "x70 y10 w60 vHours Number", "0")
-dlg.Add("Text", "x150 y12", "Minutes:")
-dlg.Add("Edit", "x215 y10 w60 vMinutes Number", "0")
-dlg.Add("Text", "x295 y12", "Seconds:")
-dlg.Add("Edit", "x355 y10 w60 vSeconds Number", "0")
+dlg.Add("Text", "yp+3", "Hours:")
+dlg.Add("Edit", "yp-3 x+5 w20 vHours Number", "0")
+dlg.Add("Text", "x+15 yp+3", "Minutes:")
+dlg.Add("Edit", "x+5 yp-3 w20 vMinutes Number", "0")
+dlg.Add("Text", "x+15 yp+3", "Seconds:")
+dlg.Add("Edit", "x+5 yp-3 w20 vSeconds Number", "0")
 ; Sleep button
-btnSleep := dlg.Add("Button", "x10 y50 w200 h30", "Sleep")
+btnSleep := dlg.Add("Button", "xs w215 h30", "Sleep")
 btnSleep.OnEvent("Click", DoSleep)
 
 ; Exit button (optional)
-btnExit := dlg.Add("Button", "x220 y50 w195 h30", "Exit")
+btnExit := dlg.Add("Button", "xs w215 h30", "Exit")
 btnExit.OnEvent("Click", (*) => dlg.Destroy())
 
 ; Abort button
-btnAbort := dlg.Add("Button", "x10 y90 w405 h30", "Abort Shutdown")
+btnAbort := dlg.Add("Button", "xs w215 h30", "Abort Shutdown")
 btnAbort.OnEvent("Click", Abort)
 ; dlg.Opt("+AlwaysOnTop")
 ; dlg.OnEvent("Close", (*) => MsgBox("Please use the Exit button to close the application."))
